@@ -117,7 +117,8 @@ export function PageLayout({
       </header>
 
       {/* CONTENT */}
-      <div className="w-11/12 m-auto md:w-9/12 md:m-auto">
+      {/* w-[95%] m-auto */}
+      <div className="md:w-9/12 md:m-auto">
         <h1
           className="m-0 font-normal leading-tight text-pastel-brick font-homemade-apple"
           style={{ fontSize: "clamp(30px,4vw,52px)", letterSpacing: "0.01em" }}
