@@ -1,6 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Homemade_Apple,
+  Lato,
+  Meddon,
+  Momo_Signature,
+  Source_Code_Pro,
+} from "next/font/google";
 import "./globals.css";
+
+const homemadeApple = Homemade_Apple({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-homemade-apple",
+});
+
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-lato",
+});
+
+const meddon = Meddon({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-meddon",
+});
+
+const momoSignature = Momo_Signature({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-momo-signature",
+});
+
+const sourceCodePro = Source_Code_Pro({
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-source-code-pro",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${homemadeApple.variable} ${lato.variable} ${meddon.variable} ${momoSignature.variable} ${sourceCodePro.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
