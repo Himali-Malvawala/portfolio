@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { PageLayout } from "../components/PageLayout";
+
+export const metadata: Metadata = {
+  title: "socials",
+  description: "projects himali has worked on.",
+};
 
 export default function Experience() {
   return (

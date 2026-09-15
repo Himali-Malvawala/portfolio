@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import { PageLayout } from "../components/PageLayout";
 import { PolaroidBoard } from "../components/PolaroidBoard";
+
+export const metadata: Metadata = {
+  title: "about",
+  description:
+    "a little about himali — background, interests, and a few photos.",
+};
 
 export default function About() {
   const ABOUT_PHOTOS: any[] = [

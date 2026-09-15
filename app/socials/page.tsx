@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { PageLayout } from "../components/PageLayout";
 import { SocialLink } from "../components/SocialLink";
 
@@ -54,6 +55,11 @@ const socialItems = [
     // detail: "in/himali",
   },
 ] as const;
+
+export const metadata: Metadata = {
+  title: "socials",
+  description: "ways to reach himali — email, linkedin, twitter, and github.",
+};
 
 export default function Page() {
   return (
