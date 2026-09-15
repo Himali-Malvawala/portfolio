@@ -68,7 +68,7 @@ export default function About() {
             </span>
           </div>
 
-          <div className="flex flex-col gap-[clamp(18px,2vw,26px)] font-source-code-pro text-[clamp(13px,1.05vw,16px)] leading-loose tracking-[0.01em] text-body-text">
+          <div className="flex flex-col gap-[clamp(18px,2vw,26px)] font-source-code-pro text-[clamp(13px,1.05vw,16px)] leading-loose tracking-[0.01em] text-white">
             <p className="m-0" style={{ textWrap: "pretty" }}>
               hi, i&apos;m himali!
             </p>

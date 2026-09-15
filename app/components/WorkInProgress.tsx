@@ -25,7 +25,7 @@ export function WorkInProgress({
         {/* <p className="m-0 font-handwritten text-[clamp(22px,3.2vw,34px)] leading-[1.2] text-pastel-brick">
           still tidying up in here!
         </p> */}
-        <div className="min-h-[1.6em] font-mono text-[clamp(13px,1.1vw,16px)] tracking-[0.02em] text-body-text">
+        <div className="min-h-[1.6em] font-mono text-[clamp(13px,1.1vw,16px)] tracking-[0.02em] text-white">
           <Typewriter text={message} speedMs={45} />
         </div>
       </div>
