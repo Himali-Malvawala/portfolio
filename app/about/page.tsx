@@ -87,14 +87,15 @@ export default function About() {
             <p className="m-0" style={{ textWrap: "pretty" }}>
               in a nutshell, i&apos;m a software developer, a curator of
               oddly-specific Spotify playlists, a sucker for game nights, a
-              fitness novice, and someone who loves sunsets.
+              fitness novice, and someone who loves sunsets and moon.
             </p>
             <p className="m-0" style={{ textWrap: "pretty" }}>
-              i have a degree in business administration and while pursuing that
-              my brother encouraged me to start learning web development, that's
-              how this roller coaster journet started. i wasn't always a fan of
-              spending most of my day on the laptop, but now it's my favorite
-              part of the day.
+              i have a degree in business administration and while pursuing
+              that, half-way i realised that as much as i love mathematics I
+              wasn't passionate about it. that's when this roller coaster
+              journey started, i learned web development and in an instant i
+              knew that this was it! cause here i can be creative, fun, and be
+              passionate about building things, and i love that side of me.
             </p>
             <p className="m-0" style={{ textWrap: "pretty" }}>
               i wasn't always a fan of spending most of my day on the laptop,
