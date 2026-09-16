@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageLayout } from "../components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "socials",
+  title: "experience",
   description: "projects himali has worked on.",
 };
 
