@@ -8,6 +8,11 @@ const FOOTER_LINKS = [
     href: "mailto:himalimalvawala@gmail.com",
     external: false,
   },
+  {
+    label: "instagram ↗",
+    href: "https://www.instagram.com/himali.malvawala",
+    external: true,
+  },
   //   {
   //     label: "linkedin ↗",
   //     href: "https://linkedin.com/in/",
