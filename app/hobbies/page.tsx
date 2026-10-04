@@ -135,9 +135,11 @@ export default function Page() {
         <div className="flex flex-wrap items-center gap-x-5 gap-y-3 font-mono text-[clamp(12px,1vw,14px)] tracking-[0.04em] text-white">
           <span>got something i should try next?</span>
           <Link
-            href="mailto:himalimalvawala.com"
+            href="https://www.instagram.com/himali.malvawala"
             className="inline-block font-mono tracking-[0.12em] text-clay no-underline transition-transform duration-250 hover:scale-[1.08]"
             style={{ transitionTimingFunction: "cubic-bezier(.2,.8,.2,1)" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             tell me ↗
           </Link>
