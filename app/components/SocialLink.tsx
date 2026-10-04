@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -43,16 +44,25 @@ export function SocialLink({
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
     >
-      <img
-        src={icon}
-        alt={alt}
-        className="block h-auto"
+      <div
+        className="relative"
         style={{
           width: `${imgWidthPct}%`,
           maxWidth: `${imgMaxWidth}px`,
-          filter: "drop-shadow(0 10px 18px rgba(40,30,25,0.2))",
+          aspectRatio: "1 / 1",
         }}
-      />
+      >
+        <Image
+          src={icon}
+          alt={alt}
+          fill
+          sizes={`${imgMaxWidth}px`}
+          style={{
+            objectFit: "contain",
+            filter: "drop-shadow(0 10px 18px rgba(40,30,25,0.2))",
+          }}
+        />
+      </div>
       <span className="font-mono text-[clamp(13px,1.1vw,16px)] font-medium tracking-[0.14em] pt-2 text-white">
         {label}
       </span>

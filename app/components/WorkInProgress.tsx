@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { Typewriter } from "./Typewriter";
 
 interface WorkInProgressProps {
@@ -11,9 +11,13 @@ export function WorkInProgress({
 }: WorkInProgressProps) {
   return (
     <div className="flex flex-col items-center gap-[clamp(18px,2.4vw,28px)] pt-16 md:py-[clamp(20px,3.5vw,40px)] text-center">
-      <img
+      <Image
         src="/images/wip.png"
         alt="a laptop, open planner, pen, and cup of coffee on a desk, with a work-in-progress caution sign"
+        width={678}
+        height={565}
+        sizes="(min-width: 768px) 420px, 82vw"
+        priority
         className="block h-auto w-full"
         style={{
           maxWidth: "min(420px, 82%)",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export interface PolaroidItem {
@@ -308,11 +309,14 @@ export function PolaroidBoard({
               opacity: ready ? 1 : 0,
             }}
           >
-            <div className="aspect-5/6 w-full overflow-hidden bg-[#e8e2d6] pointer-events-none">
-              <img
+            <div className="relative aspect-5/6 w-full overflow-hidden bg-[#e8e2d6] pointer-events-none">
+              <Image
                 src={item.src}
                 alt={item.alt}
-                className="block h-full w-full object-fill"
+                fill
+                sizes="200px"
+                style={{ objectFit: "fill" }}
+                priority
               />
             </div>
             <div className="px-0.5 pb-6 pt-2.25 font-homemade-apple text-[12px] md:text-[15px] leading-[1.4] text-pastel-brick pointer-events-none">
