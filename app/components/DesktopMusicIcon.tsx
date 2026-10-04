@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useMusicPlayer } from "@/lib/useMusicPlayer";
+import { getIconDimensions } from "./DesktopIcon";
 
 interface DesktopMusicIconProps {
   left: number;
@@ -30,6 +32,7 @@ export function DesktopMusicIcon({
 }: DesktopMusicIconProps) {
   const [active, setActive] = useState(false);
   const { playing, failed, toggle } = useMusicPlayer(trackSrc);
+  const { width: iw, height: ih } = getIconDimensions(icon);
 
   const nowPlaying = failed
     ? `add your mp3 at ${trackSrc.replace(/^\//, "")}`
@@ -69,9 +72,12 @@ export function DesktopMusicIcon({
         {label}
       </span>
 
-      <img
+      <Image
         src={icon}
         alt={alt}
+        width={iw}
+        height={ih}
+        sizes="15vw"
         className="block h-auto w-full transition-transform duration-300"
         style={{
           transform: `rotate(${active ? hoverRotate : rotate}deg) scale(${active ? 1.06 : 1})`,

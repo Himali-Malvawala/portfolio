@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -58,11 +59,13 @@ export function HobbyCard({
         {...handlers}
       >
         {image && (
-          <div className="aspect-4/5 w-full overflow-hidden bg-[#e8e2d6]">
-            <img
+          <div className="relative aspect-4/5 w-full overflow-hidden bg-[#e8e2d6]">
+            <Image
               src={image.src}
               alt={image.alt}
-              className="block h-full w-full object-cover"
+              fill
+              sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
+              className="object-cover"
             />
           </div>
         )}
@@ -96,11 +99,13 @@ export function HobbyCard({
       {...handlers}
     >
       {image && (
-        <div className="aspect-square w-full overflow-hidden rounded-xs bg-[#e8e2d6]">
-          <img
+        <div className="relative aspect-square w-full overflow-hidden rounded-xs bg-[#e8e2d6]">
+          <Image
             src={image.src}
             alt={image.alt}
-            className="block h-full w-full object-cover"
+            fill
+            sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
+            className="object-cover"
           />
         </div>
       )}

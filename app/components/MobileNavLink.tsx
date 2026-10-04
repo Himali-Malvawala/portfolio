@@ -1,4 +1,8 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { getIconDimensions } from "./DesktopIcon";
 
 interface MobileNavLinkProps {
   href: string;
@@ -17,15 +21,20 @@ export function MobileNavLink({
   widthPct,
   rotate,
 }: MobileNavLinkProps) {
+  const { width: iw, height: ih } = getIconDimensions(icon);
+
   return (
     <Link
       href={href}
       className="grid w-full max-w-100 min-h-11 grid-cols-2 items-center gap-4 no-underline transition-transform duration-200 active:scale-[0.97]"
       style={{ transitionTimingFunction: "cubic-bezier(.2,.8,.2,1)" }}
     >
-      <img
+      <Image
         src={icon}
         alt={alt}
+        width={iw}
+        height={ih}
+        sizes="200px"
         className="block h-auto"
         style={{
           width: `${widthPct}%`,

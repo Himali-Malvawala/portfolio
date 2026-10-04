@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useMusicPlayer } from "@/lib/useMusicPlayer";
+import { getIconDimensions } from "./DesktopIcon";
 
 interface MobileMusicRowProps {
   icon: string;
@@ -18,6 +20,7 @@ export function MobileMusicRow({
   trackLabel,
 }: MobileMusicRowProps) {
   const { playing, failed, toggle } = useMusicPlayer(trackSrc);
+  const { width: iw, height: ih } = getIconDimensions(icon);
 
   const nowPlaying = failed
     ? `add your mp3 at ${trackSrc.replace(/^\//, "")}`
@@ -42,9 +45,12 @@ export function MobileMusicRow({
       style={{ transitionTimingFunction: "cubic-bezier(.2,.8,.2,1)" }}
     >
       <div className="relative mx-auto w-[88%]">
-        <img
+        <Image
           src={icon}
           alt={alt}
+          width={iw}
+          height={ih}
+          sizes="170px"
           className="block h-auto w-full"
           style={{
             transform: "rotate(-4deg)",

@@ -1,7 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+// Real pixel dimensions of the nav icons, keyed by filename, so Image gets
+// the correct aspect ratio without needing a separate lookup file. Also
+// imported by DesktopMusicIcon, MobileNavLink and MobileMusicRow.
+const ICON_DIMENSIONS: Record<string, { width: number; height: number }> = {
+  "experience-icon.png": { width: 306, height: 384 },
+  "film-strip-icon.png": { width: 736, height: 736 },
+  "folder-icon.png": { width: 388, height: 373 },
+  "hobbies-icon.png": { width: 379, height: 335 },
+  "music-icon.png": { width: 393, height: 362 },
+  "projects-icon.png": { width: 380, height: 359 },
+  "socials-icon.png": { width: 374, height: 361 },
+};
+
+export function getIconDimensions(src: string) {
+  const basename = src.split("/").pop() ?? src;
+  return ICON_DIMENSIONS[basename] ?? { width: 400, height: 400 };
+}
 
 interface DesktopIconProps {
   href: string;
@@ -27,6 +46,7 @@ export function DesktopIcon({
   hoverRotate,
 }: DesktopIconProps) {
   const [active, setActive] = useState(false);
+  const { width: iw, height: ih } = getIconDimensions(icon);
 
   return (
     <Link
@@ -49,9 +69,12 @@ export function DesktopIcon({
       >
         {label}
       </span>
-      <img
+      <Image
         src={icon}
         alt={alt}
+        width={iw}
+        height={ih}
+        sizes="15vw"
         className="block h-auto w-full transition-transform duration-300"
         style={{
           transform: `rotate(${active ? hoverRotate : rotate}deg) scale(${active ? 1.06 : 1})`,

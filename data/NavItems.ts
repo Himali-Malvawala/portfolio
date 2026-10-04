@@ -84,11 +84,11 @@ export const musicItem = {
 
 // Order the icons appear in on the stacked mobile layout.
 export const mobileOrder = [
+  "hobbies",
   "experience",
   "socials",
   "music",
   "projects",
-  "hobbies",
   "stills",
   "resume",
 ] as const;
