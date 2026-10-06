@@ -62,13 +62,13 @@ const HOBBY_CARDS: HobbyCardData[] = [
     rotate: 1,
     image: { src: "/images/hobbies/moon.png", alt: "the moon" },
   },
-  {
-    key: "crochet",
-    title: "crocheting (new!)",
-    description:
-      "recently picked it up. currently at the stage where i've promised everyone a bag.",
-    rotate: -1.6,
-  },
+  // {
+  //   key: "crochet",
+  //   title: "crocheting (new!)",
+  //   description:
+  //     "recently picked it up. currently at the stage where i've promised everyone a bag.",
+  //   rotate: -1.6,
+  // },
   {
     key: "baking",
     title: "baking, sometimes",
